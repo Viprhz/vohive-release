@@ -202,6 +202,7 @@ assert_contains "$install_sh_output" "手动启动命令"
 
 install_systemd_output="$(run_install_case sh systemd)"
 assert_contains "$install_systemd_output" "systemctl enable vohive"
+assert_contains "$install_systemd_output" "https://github.com/Viprhz/vohive-release/releases/download/v9.9.9"
 
 install_openwrt_output="$(run_install_case sh openwrt)"
 assert_contains "$install_openwrt_output" "init.d/vohive"
